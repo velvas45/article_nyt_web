@@ -9,6 +9,7 @@ import {
 } from "./lib/action/articleSearch.action";
 import { useQueryClient } from "react-query";
 import Filter from "./components/shared/Filter";
+import ErrorImage from "../public/404_error.png";
 
 function App() {
   const queryClient = useQueryClient();
@@ -52,7 +53,7 @@ function App() {
       <>
         <div className="w-full h-screen py-4">
           <img
-            src="../public/404_error.png"
+            src={ErrorImage}
             alt="error image"
             className="w-full h-full object-contain mix-blend-multiply"
           />
