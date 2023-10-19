@@ -86,7 +86,7 @@ function App() {
         </>
       ) : (
         <div className="mt-6 flex flex-wrap w-full gap-6 justify-center items-center">
-          {data?.response.docs.map((each) => (
+          {data?.response.docs.map((each: any) => (
             <>
               <ArticleCard article={each} key={each._id} />
             </>

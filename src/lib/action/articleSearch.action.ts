@@ -50,7 +50,7 @@ export const refetchArticle = async ({
   page,
   sort,
 }: Params) => {
-  await queryClient.prefetchQuery({
+  await queryClient!.prefetchQuery({
     queryKey: ["searchArticle", { path, queryParams, page, sort }],
     queryFn: () => fetchData({ path, queryParams, page, sort }),
   });
